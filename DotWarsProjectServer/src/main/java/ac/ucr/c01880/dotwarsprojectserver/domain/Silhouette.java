@@ -7,22 +7,25 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import ac.ucr.c01880.dotwarsprojectserver.utility.Route;
-
+import java.io.File;
 
 
 public class Silhouette {
-	private int x,y; 
-	private BufferedImage image; 
-	
-	public Silhouette(int x, int y) {
-		this.x=x; 
-		this.y=y; 
-		try {
-			this.image = ImageIO.read(getClass().getResourceAsStream(Route.ROUTESILHOUETTE));
 
-		} catch (IOException ex) {
-			System.err.println("No se pudo cargar la imagen del Dot");
-		} // try-catch
+    private int x, y;
+    private BufferedImage image;
+
+    public Silhouette(int x, int y) {
+        this.x = x;
+        this.y = y;
+        try {
+
+            File file = new File(Route.ROUTESILHOUETTE);
+            this.image = ImageIO.read(file);
+
+        } catch (IOException ex) {
+            System.err.println("No se pudo cargar la imagen del Dot");
+        } // try-catch
 	}//end of class
 	
 	public void draw(Graphics g) {

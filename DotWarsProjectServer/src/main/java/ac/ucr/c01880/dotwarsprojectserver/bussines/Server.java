@@ -7,9 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
 
-import ac.ucr.c01880.dotwarsprojectserver.domain.SingletonGameServer;
 
 
 
@@ -59,13 +57,7 @@ public void acceptClient() {
 			
 			
 			
-//					if (SingletonGameServer.getIntance().getGame().getSilhoette().size()==1) {
-//						System.out.println(SingletonGameServer.getIntance().getGame().getSilhoette().size());
-//						SingletonGameServer.getIntance().getGame().addSilhuetee(5, 0);
-//					}else {
-//						System.out.println("entre aqui");
-//						SingletonGameServer.getIntance().getGame().addSilhuetee(0, 0);
-//					}
+
 				
 				this.clientsGod.add(client); 
 				ThreadControlClient ThreadClient= new ThreadControlClient(client, logic,  this.clientsGod); 
