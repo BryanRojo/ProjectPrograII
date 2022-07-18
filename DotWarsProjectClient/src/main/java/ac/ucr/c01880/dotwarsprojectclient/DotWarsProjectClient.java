@@ -1,9 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
+
 
 package ac.ucr.c01880.dotwarsprojectclient;
+
+import ac.ucr.c01880.dotwarsprojectclient.bussiness.Controller;
 
 /**
  *
@@ -12,6 +11,6 @@ package ac.ucr.c01880.dotwarsprojectclient;
 public class DotWarsProjectClient {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+          new Controller();
     }
 }
