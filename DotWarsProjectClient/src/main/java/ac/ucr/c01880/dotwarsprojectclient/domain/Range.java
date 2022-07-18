@@ -7,6 +7,7 @@ import java.io.Serializable;
 import javax.imageio.ImageIO;
 
 import ac.ucr.c01880.dotwarsprojectclient.utility.Route;
+import java.io.File;
 
 public class Range extends Stats {
 
@@ -14,13 +15,15 @@ public class Range extends Stats {
 	
 
 	public Range(int x, int y) {
-		super(x, y);
-		this.cost=3; 
-		try {
-			this.image = ImageIO.read(getClass().getResourceAsStream(Route.ROUTERANGE));
+            super(x, y);
+            this.cost = 3;
+            try {
 
-		} catch (IOException ex) {
-			System.err.println("No se pudo cargar la imagen del Dot");
+                File file = new File(Route.ROUTERANGE);
+                this.image = ImageIO.read(file);
+
+            } catch (IOException ex) {
+                System.err.println("No se pudo cargar la imagen del Dot");
 		} // try-catch
 	}
 

@@ -7,6 +7,7 @@ import java.io.Serializable;
 import javax.imageio.ImageIO;
 
 import ac.ucr.c01880.dotwarsprojectclient.utility.Route;
+import java.io.File;
 
 public class Life extends Stats {
 
@@ -17,8 +18,10 @@ public class Life extends Stats {
 		
 		super(x, y);
 		this.cost=1; 
-		try {
-			this.image = ImageIO.read(getClass().getResourceAsStream(Route.ROUTELIFE));
+	           try {
+                File file = new File(Route.ROUTELIFE);
+                this.image = ImageIO.read(file);
+
 
 		} catch (IOException ex) {
 			System.err.println("No se pudo cargar la imagen del Dot");

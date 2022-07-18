@@ -2,7 +2,7 @@ package ac.ucr.c01880.dotwarsprojectclient.domain;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.Serializable;
+
 
 public abstract class Stats  {
 	

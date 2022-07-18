@@ -3,7 +3,7 @@ package ac.ucr.c01880.dotwarsprojectclient.domain;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import java.io.Serializable;
+
 
 
 
